@@ -19,29 +19,29 @@ const page = () => {
   const [loading, setLoading] = useState(false)
   const [status, setStatus] = useState('idle')
 
-  /*   const handleSubmit = async (e) => {
-      e.preventDefault()
-      setStatus('loading')
-  
-      try {
-        const response = await fetch('https://formspree.io/f/mvgadenv', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(formData)
-        })
-  
-        if (response.ok) {
-          setStatus('success')
-          setFormData({ name: '', email: '', message: '' })
-        } else {
-          throw new Error('Failed to send message')
-        }
-      } catch (error) {
-        setStatus('error')
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setStatus('loading')
+
+    try {
+      const response = await fetch('https://formspree.io/f/mgvkbood', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+
+      if (response.ok) {
+        setStatus('success')
+        setFormData({ name: '', email: '', message: '' })
+      } else {
+        throw new Error('Failed to send message')
       }
-    } */
+    } catch (error) {
+      setStatus('error')
+    }
+  }
 
   const socialLinks = [
     {
@@ -131,7 +131,7 @@ const page = () => {
                   id="message"
                   rows={5}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-transparent focus:ring-2 focus:ring-black focus:border-transparent"
-                  placeholder="Tell me about your project..."
+                  placeholder=" What program would you like to enroll your child in?"
                   required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -143,6 +143,7 @@ const page = () => {
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 className="w-full px-6 py-3 bg-black  text-white rounded-lg font-medium flex items-center justify-center gap-2"
+                onClick={handleSubmit}
               >
                 {loading ? (
                   <>
@@ -165,9 +166,9 @@ const page = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
-                  className="mt-6 p-4 bg-green-100 text-green-800 dark:text-green-200 rounded-lg"
+                  className="mt-6 p-4 bg-green-800 text-green-100 dark:text-green-200 rounded-lg"
                 >
-                  Message sent successfully! I'll get back to you soon.
+                  Message sent successfully! We'll get back to you soon.
                 </motion.div>
               )}
 

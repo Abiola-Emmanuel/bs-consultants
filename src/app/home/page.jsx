@@ -2,22 +2,25 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaChild, FaUsers, FaSchool } from "react-icons/fa";
 
 export default function Hero() {
 
   const services = [
     {
-      title: "ABA Therapy",
-      description: "One-on-one sessions to improve communication, social, and behavioral skills.",
+      icon: <FaChild className="text-blue-600 mx-auto text-3xl mb-4" />,
+      title: "Clinic-Based ABA Therapy ",
+      description: " One on one ABA therapy provided in a supportive and nurturing environment, using reinforcement-based strategies to enhance communication skills, play and leisure skills, attention and focus, imitation skills, gross and fine motor skills, self help skills and reduction of challenging behaviors in children with autism and other developmental disorders.",
     },
     {
-      title: "Parent Training",
-      description: "Empowering parents with strategies to support their child’s development.",
+      icon: <FaUsers className="text-blue-600 mx-auto text-3xl mb-4" />,
+      title: "Social Skills Program",
+      description: "A weekly program aimed at helping children quickly develop social skills, interact better with peers, and increase their overall social competence. Children practice in a supportive environment that promotes social engagement, sharing, turn-taking, joint attention, understanding social cues and collaboration. Group sessions help generalize social skills and build friendships.",
     },
     {
-      title: "School Support",
-      description: "Collaborating with educators to create inclusive learning environments.",
+      icon: <FaSchool className="text-blue-600 mx-auto text-3xl mb-4" />,
+      title: "School Readiness Program",
+      description: "Based on Applied Behavior Analysis (ABA), designed to help children develop the skills necessary for success in a school environment. These programs teach daily living skills that children need to be independent in a school setting, such as following routines, self-care, organization, reducing problem behavior, building foundational academic skills, transition support.",
     },
   ]
 
@@ -38,7 +41,7 @@ export default function Hero() {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="text-blue-700 font-medium mb-4"
             >
-              Personalized Therapy for Children with Autism
+              Facilitating growth and development
             </motion.p>
 
             {/* Main Heading */}
@@ -46,9 +49,9 @@ export default function Hero() {
               initial={{ opacit: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="text-4xl md:tex-6xl font-bold text-gray-900 mb-6"
+              className="text-4xl md:tex-6xl font-bold text-gray-900 mb-6 line-he"
             >
-              Nurturing Growth Through <span className="text-blue-800">Education and Compassion</span>
+              Through compassionate <span className="text-blue-800">care and a tailored approach to address the distinctive needs of every child.</span>
             </motion.h1>
 
             {/* Subheading */}
@@ -59,7 +62,7 @@ export default function Hero() {
               transition={{ delay: 0.6, duration: 0.5 }}
               className="text-lg md:text-xl text-gray-700 mb-8"
             >
-              Evidence-based ABA therapies designed to help your child thrive
+              Evidence based behavior therapy to help your child thrive
             </motion.p>
 
             <motion.div
@@ -78,7 +81,7 @@ export default function Hero() {
                 href="/services"
                 className="px-8 py-3 bg-white text-blue-700 border-2 border-blue-700 rounded-lg font-medium hover:bg-blue-50 transition-colors"
               >
-                Our Therapies
+                Our Services
               </Link>
             </motion.div>
           </motion.div>
@@ -105,7 +108,7 @@ export default function Hero() {
             </motion.h2>
 
             <p className="text-lg text-gray-600 mb-8">
-              We’re a team of certified therapists dedicated to helping children with autism develop essential life skills through Applied Behaviour Analysis (ABA). Our approach is rooted in education, compassion, and individualized care.
+              Our team of professionals, led by a Board-Certified Behavior Analyst, is dedicated to assisting children with autism and other developmental disabilities in acquiring essential life skills that improve their quality of life through Applied Behaviour Analysis (ABA). Our approach is play-based and grounded in the principles of Applied Behavior Analysis, compassion, and individualized care.
             </p>
 
             <Link href="/about" className="px-6 py-2.5 bg-blue-700 text-white rounded-lg font-medium hover:bg-blue-800 inline-block">
@@ -129,6 +132,7 @@ export default function Hero() {
                 whileHover={{ y: -5 }}
                 className="bg-white p-6 rounded-lg shadow-lg text-center"
               >
+                {service.icon}
                 <h3 className="text-xl font-bold text-blue-800 mb-3">{service.title}</h3>
 
                 <p className="text-gray-600">{service.description}</p>

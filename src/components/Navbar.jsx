@@ -3,6 +3,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { FaTimes } from "react-icons/fa";
+import { CiMenuFries } from "react-icons/ci";
 
 const navLinks = [
   { id: 1, name: "Home", path: "/" },
@@ -16,7 +18,6 @@ export default function Navbar() {
 
   return (
     <motion.nav className="sticky top-0 z-50 bg-white shadow-lg">
-      {/* Main Navbar Container */}
       <div className="container mx-auto px-4 py-3 md:py-4">
         <div className="flex justify-between items-center">
           {/* Logo/Brand */}
@@ -54,39 +55,63 @@ export default function Navbar() {
                 closed: { rotate: 0 },
               }}
             >
-              {isMobileMenuOpen ? "✕" : "☰"}
+              {isMobileMenuOpen ? <FaTimes /> : <CiMenuFries />}
             </motion.span>
           </motion.button>
         </div>
 
-        {/* Mobile Menu Dropdown (Full-screen overlay) */}
+        {/* Mobile Menu (Slides from right) */}
         <AnimatePresence>
           {isMobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="md:hidden fixed inset-0 bg-black/90 backdrop-blur-sm z-40 pt-20"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <div className="flex flex-col items-center gap-6">
-                {navLinks.map((link) => (
-                  <motion.div
-                    key={link.id}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Link
-                      href={link.path}
-                      className="text-white text-2xl font-medium py-2"
-                      onClick={() => setIsMobileMenuOpen(false)}
+            <>
+              {/* Overlay (click to close) */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="md:hidden fixed inset-0 bg-black/50 z-40"
+                onClick={() => setIsMobileMenuOpen(false)}
+              />
+
+              {/* Sidebar Menu */}
+              <motion.div
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "100%" }}
+                transition={{ type: "tween", ease: "easeInOut" }}
+                className="md:hidden fixed top-0 right-0 w-64 h-full bg-white shadow-xl z-50"
+              >
+                {/* Close Button (Top-right inside menu) */}
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 transition-colors"
+                  aria-label="Close menu"
+                >
+                  <FaTimes className="h-5 w-5 text-gray-700" /> {/* React Icon */}
+                </button>
+
+                {/* Menu Links */}
+                <div className="flex flex-col items-start gap-4 p-6 pt-20">
+                  {navLinks.map((link) => (
+                    <motion.div
+                      key={link.id}
+                      initial={{ x: 20, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ delay: 0.1 * link.id }}
+                      className="w-full border-b border-gray-100"
                     >
-                      {link.name}
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+                      <Link
+                        href={link.path}
+                        className="block py-3 text-gray-800 hover:text-blue-700 text-lg"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {link.name}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </>
           )}
         </AnimatePresence>
       </div>
