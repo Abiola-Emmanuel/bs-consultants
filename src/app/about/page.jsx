@@ -114,6 +114,7 @@ export default function About() {
                 key={index}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all"
               >
