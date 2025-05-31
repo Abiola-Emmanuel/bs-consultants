@@ -43,7 +43,7 @@ export default function Hero() {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="text-3xl md:tex-6xl font-bold text-gray-900 mb-6 line-he"
             >
-              Facilitating growth and development Through compassionate <span className="text-blue-800">care </span> and a tailored approach to address the distinctive needs of every child.
+              Facilitating growth and development through compassionate <span className="text-blue-800">care </span> and a tailored approach to address the distinctive needs of every child.
             </motion.h1>
 
             {/* Subheading */}
