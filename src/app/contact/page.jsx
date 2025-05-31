@@ -92,7 +92,7 @@ const page = () => {
               Send a Message
             </h2>
 
-            <form className="space-y-6" /* onSubmit={handleSubmit} */>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-700 ">
                   Name
@@ -143,7 +143,6 @@ const page = () => {
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 className="w-full px-6 py-3 bg-black  text-white rounded-lg font-medium flex items-center justify-center gap-2"
-                onClick={handleSubmit}
               >
                 {loading ? (
                   <>
@@ -194,7 +193,7 @@ const page = () => {
           >
 
             <div>
-              <h2 className="text-2xl font-bold mb-6">Find Me Online</h2>
+              <h2 className="text-2xl font-bold mb-6">Contact Us Online</h2>
 
               <div className="space-y-4">
                 {socialLinks.map((social, index) => (

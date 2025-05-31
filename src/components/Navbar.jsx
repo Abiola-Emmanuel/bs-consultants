@@ -17,7 +17,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <motion.nav className="sticky top-0 z-50 bg-white shadow-lg">
+    <motion.nav className="sticky top-0 z-50 bg-white shadow-lg ">
       <div className="container mx-auto px-4  md:py-4">
         <div className="flex justify-between items-center">
           {/* Logo/Brand */}
@@ -25,7 +25,7 @@ export default function Navbar() {
             <Link href="/" className="text-xl md:text-2xl font-bold">
               {/* B & S Consultants | */}
               <div className="flex items-center ">
-                <img src="/logo5.svg" className="w-[85px]" alt="" /> <span>| B & S Consultants </span>
+                <img src="/logo4.svg" className="w-[85px]" alt="" /> <span>| B & S Consultants </span>
               </div>
             </Link>
           </motion.div>

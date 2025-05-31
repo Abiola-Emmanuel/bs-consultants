@@ -8,49 +8,51 @@ export default function Services() {
     {
       icon: <FaChild className="text-blue-600 text-4xl" />,
       title: "Clinic-Based ABA Therapy",
-      description: "One-on-one therapy in our nurturing clinic environment, using reinforcement-based strategies to enhance communication, social skills, and reduce challenging behaviors—exactly as described on our homepage.",
+      description: "One-on-one therapy in our nurturing clinic environment, uses reinforcement-based strategies to improve communication, social skills, and reduce challenging behaviors. Each program is tailored to meet the unique needs of every child, ensuring a personalized approach that maximizes growth and learning opportunities.",
       highlights: [
-        "Personalized behavior intervention plans",
-        "Play-based learning strategies",
-        "Daily progress tracking",
-        "Parent collaboration sessions"
+        "Individualized behavior intervention plans.",
+        "Play-based learning.",
+        "Daily progress tracking.",
+        "Parent collaboration meetings."
       ],
-      homepageQuote: "Enhances communication, play, attention, and self-help skills in children with autism."
+      homepageQuote: "Enhances communication, play, attention, and self-help skills for children with autism."
     },
     {
       icon: <FaUsers className="text-blue-600 text-4xl" />,
       title: "Social Skills Program",
-      description: "Our weekly program—featured on the homepage—helps children develop peer interaction skills through structured play and collaboration in a supportive group setting.",
+      description: "Our weekly program aims to enhance children's peer interaction skills through structured play and collaboration in a group setting.",
       highlights: [
-        "Peer interaction practice",
-        "Joint attention activities",
-        "Social cues training",
-        "Friendship-building exercises"
+        "Peer interaction practice.",
+        "Joint attention activities.",
+        "Social cues training.",
+        "Friendship-building exercises."
       ],
-      homepageQuote: "Helps children quickly develop social skills and interact better with peers."
+      homepageQuote: "Supports children's development of social skills and peer interaction."
     },
     {
       icon: <FaSchool className="text-blue-600 text-4xl" />,
       title: "School Readiness Program",
-      description: "As highlighted on our homepage, we prepare children for academic success by teaching classroom routines, foundational skills, and independence.",
+      description: "We prepare children for academic success by teaching classroom routines, foundational skills, and independence. This program aims to provide comprehensive support to children, ensuring they are well equipped to handle the challenges and expectations of school.",
       highlights: [
-        "IEP goal collaboration",
-        "Transition support",
-        "Self-care skill development",
-        "Teacher training"
+        "Pre academic skills.",
+        "Adaptive skills training - folowing routines, self care and organization.",
+        "Transition support- moving from therapy to school.",
+        "Self-care skill development.",
+        "Communication skills.",
+        "Reducion of challenging behavior.",
       ],
-      homepageQuote: "Teaches daily living skills needed for independence in school settings."
+      homepageQuote: "Teaches essesntial skils for school independence"
     },
-    // Added new service to match homepage completeness
+
     {
       icon: <FaHome className="text-blue-600 text-4xl" />,
       title: "In-Home ABA Therapy",
       description: "Therapy delivered in your child's natural environment to promote skill generalization.",
       highlights: [
-        "Family-centered approach",
-        "Real-life skill practice",
-        "Behavior management at home",
-        "Parent coaching included"
+        "Family-centered approach.",
+        "Real-life skill practice.",
+        "Behavior management at home.",
+        "Parent coaching included."
       ]
     }
   ];
@@ -74,7 +76,7 @@ export default function Services() {
             className="text-xl max-w-3xl mx-auto leading-relaxed"
           >
             {/* Direct quote from homepage */}
-            "Compassionate care and a tailored approach to address the distinctive needs of every child" — just as we promise on our homepage.
+            "Compassionate care and a tailored approach to address the distinctive needs of every child"
           </motion.p>
         </div>
       </section>
@@ -89,10 +91,10 @@ export default function Services() {
             className="max-w-5xl mx-auto text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Comprehensive <span className="text-blue-600">ABA Programs</span>
+              High Quality <span className="text-blue-600">ABA Programs</span>
             </h2>
             <p className="text-lg text-gray-600">
-              Exactly as described on our homepage, we specialize in play-based ABA therapy that helps children thrive.
+              We specialize in play-based ABA therapy that helps children thrive.
             </p>
           </motion.div>
 
@@ -153,7 +155,7 @@ export default function Services() {
               Ready to Begin Your Child's Journey?
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Just like we mention on our homepage, our evidence-based therapy can help your child thrive.
+              Our evidence-based therapy can help your child thrive.
             </p>
             <div className="flex flex-wrap justify-center md:gap-4 gap-10">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
