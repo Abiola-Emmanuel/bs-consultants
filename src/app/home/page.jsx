@@ -146,7 +146,7 @@ export default function Hero() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
-              <p className="text-xl font-bold">Behavior Therapy</p>
+              <p className="text-xl font-bold">B & S Consultants</p>
               <p className="text-gray-400 mt-2">&copy; {new Date().getFullYear()} All Rights Reserved</p>
             </div>
             <div className="flex space-x-6">

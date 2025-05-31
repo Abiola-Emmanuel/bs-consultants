@@ -25,7 +25,7 @@ export default function Navbar() {
             <Link href="/" className="text-xl md:text-2xl font-bold">
               {/* B & S Consultants | */}
               <div className="flex items-center ">
-                <img src="/logo4.svg" className="w-[85px]" alt="" /> <span>| B & S Consultants </span>
+                <img src="/logo5.svg" className="w-[85px]" alt="" /> <span>| B & S Consultants </span>
               </div>
             </Link>
           </motion.div>

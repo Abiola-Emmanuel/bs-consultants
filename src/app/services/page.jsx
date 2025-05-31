@@ -155,7 +155,7 @@ export default function Services() {
             <p className="text-xl text-gray-600 mb-8">
               Just like we mention on our homepage, our evidence-based therapy can help your child thrive.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center md:gap-4 gap-10">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/contact"
@@ -167,7 +167,7 @@ export default function Services() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/about"
-                  className="px-8 py-3 bg-white text-blue-700 border-2 border-blue-700 rounded-lg font-bold hover:bg-blue-50 transition-colors"
+                  className="px-8 py-3  bg-white text-blue-700 border-2 border-blue-700 rounded-lg font-bold hover:bg-blue-50 transition-colors"
                 >
                   Learn About Our Approach
                 </Link>
