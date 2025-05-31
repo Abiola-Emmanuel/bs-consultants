@@ -85,7 +85,7 @@ const page = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
-            className="bg-blue-700 p-8 rounded-xl"
+            className="bg-white p-8 rounded-xl"
           >
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <Send />

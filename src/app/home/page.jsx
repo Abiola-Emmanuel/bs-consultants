@@ -35,23 +35,15 @@ export default function Hero() {
             className="max-w-3xl mx-auto"
           >
             {/* TagLine */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="text-blue-700 font-medium mb-4"
-            >
-              Facilitating growth and development
-            </motion.p>
 
             {/* Main Heading */}
             <motion.h1
               initial={{ opacit: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="text-4xl md:tex-6xl font-bold text-gray-900 mb-6 line-he"
+              className="text-3xl md:tex-6xl font-bold text-gray-900 mb-6 line-he"
             >
-              Through compassionate <span className="text-blue-800">care and a tailored approach to address the distinctive needs of every child.</span>
+              Facilitating growth and development Through compassionate <span className="text-blue-800">care </span> and a tailored approach to address the distinctive needs of every child.
             </motion.h1>
 
             {/* Subheading */}
@@ -104,7 +96,7 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
               className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              About Behaviour Therapy
+              About Us
             </motion.h2>
 
             <p className="text-lg text-gray-600 mb-8">
@@ -112,7 +104,7 @@ export default function Hero() {
             </p>
 
             <Link href="/about" className="px-6 py-2.5 bg-blue-700 text-white rounded-lg font-medium hover:bg-blue-800 inline-block">
-              Learn More Abut US
+              Learn More
             </Link>
           </div>
         </div>
