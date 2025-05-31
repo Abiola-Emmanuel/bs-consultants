@@ -94,7 +94,7 @@ export default function Services() {
               High Quality <span className="text-blue-600">ABA Programs</span>
             </h2>
             <p className="text-lg text-gray-600">
-              We specialize in play-based ABA therapy that helps children thrive.
+              We provide high-quality Early intervention services based on the principles of ABA. Our programs are structured to support the development and well being of children from an early age by fostering essential skills such as communication, social interaction, and adaptive skills.
             </p>
           </motion.div>
 
