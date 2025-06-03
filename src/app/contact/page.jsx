@@ -43,13 +43,16 @@ const page = () => {
     }
   }
 
-  const socialLinks = [
+  const email = [
     {
       name: 'Email',
       icon: <FaMailBulk className="w-5 h-5" />,
       url: 'mailto:abiolaahmed.b.sconsultants@gmail.com',
       handle: 'abiolaahmed.b.sconsultants@gmail.com'
     },
+  ]
+
+  const socials = [
     {
       name: 'LinkedIn',
       icon: <FaLinkedin className="w-5 h-5" />,
@@ -75,7 +78,7 @@ const page = () => {
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
-          <h1 className="text-3xl md:text-6xl font-bold mb-4">Positively Impacting Lives Of Children Living With Autism And Other Developmental Disabilities</h1>
+          <h1 className="text-3xl md:text-4xl mb-4">Positively Impacting Lives Of Children Living With Autism And Other Developmental Disabilities</h1>
 
           <p className="text-lg md:text-xl text-gray-900 max-w-2xl mx-auto">Evidence based intervention</p>
         </motion.div>
@@ -193,10 +196,39 @@ const page = () => {
           >
 
             <div>
-              <h2 className="text-2xl font-bold mb-6">Contact Us Online</h2>
+              <h2 className="text-2xl font-bold mb-6">Contact Us </h2>
 
               <div className="space-y-4">
-                {socialLinks.map((social, index) => (
+                {email.map((email, index) => (
+                  <motion.a
+                    key={email.name}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.8 + index * 0.1 }}
+                    href={email.url}
+                    target="blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-4 rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors group:"
+                  >
+                    <div className="p-2 rounded-full bg-gray-100group-hover:bg-black transition-colors">
+                      {email.icon}
+                    </div>
+
+                    <div>
+                      <h3 className="font-medium">{email.name}</h3>
+
+                      <p className="text-sm text-gray-600 ">{email.handle}</p>
+                    </div>
+                  </motion.a>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold mb-6">Our Socials </h2>
+
+              <div className="space-y-4">
+                {socials.map((social, index) => (
                   <motion.a
                     key={social.name}
                     initial={{ opacity: 0, y: 10 }}

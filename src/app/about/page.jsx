@@ -25,25 +25,13 @@ export default function About() {
 
   const teamLead = [
     {
-      role: "BCBA",
+      role: "Abiola Ahmed, M.A BCBA",
       bio: `Abiola Ahmed, the owner and team lead of B&S Consultants, is a Board-Certified Behavior Analyst (BCBA). She has been active in the field of ABA since 2014 and possesses over ten years of experience working with children aged between 2 and 12, living with autism and other developmental disabilities. 
         Abiola holds a Bachelor of Science degree in Microbiology from Lagos State University and a Master of Arts from Ball State University, Indiana. Her extensive experience with autism is underscored by her personal involvement as an autism parent and her professional commitment to working with children diagnosed with autism for more than a decade. Abiola is particularly passionate about early intervention and the dissemination of ABA practices.`,
       img: "/staff-3.png"
     },
   ];
 
-  const team = [
-    {
-      role: "Behavior Technician",
-      bio: "Specializes in communication skills development for nonverbal children.",
-      img: "/staff-2.png"
-    },
-    {
-      role: "RBT in-Training",
-      bio: "Specializes in communication skills development for nonverbal children.",
-      img: "/staff-1.png"
-    }
-  ]
 
   return (
     <main>
@@ -137,55 +125,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team */}
-
-      <section className="py-20 bg-blue-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our <span className="text-blue-600"> Team </span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-
-              The passionate professionals behind our evidence-based, compassionate care.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all"
-              >
-                <div className="w-40 h-40 rounded-full bg-gray-100 overflow-hidden mx-auto mb-6 border-4 border-blue-100">
-                  <Image
-                    src={member.img}
-                    width={160}
-                    height={160}
-                    className="w-full h-full object-cover"
-                    alt="Team Member Image"
-                  />
-                </div>
-                <div className="text-center">
-
-                  <p className="text-blue-600 mb-3 flex justify-center items-center gap-1 font-bold"> {member.role}
-                  </p>
-                  <p className="text-gray-600 ">{member.bio}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
 
 
