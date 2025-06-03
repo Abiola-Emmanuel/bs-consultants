@@ -8,8 +8,8 @@ export default function About() {
   const approaches = [
     {
       icon: <FaLeaf className="text-blue-600 text-3xl mb-4" />,
-      title: "Natural Environment",
-      desc: "Therapy in settings where your child feels most comfortable—home, school, or our welcoming clinic—to foster natural learning."
+      title: "Structured Learning Environment",
+      desc: "Therapy is provided in an environment where your child feels at ease. The structured learning environment facilitates skill acquisition and generation, enabling your child to apply the learned skills in various settings such as school and home. Additionally, it offers access to specialized staff and resources."
     },
     {
       icon: <FaHeart className="text-blue-600 text-3xl mb-4" />,
@@ -23,13 +23,16 @@ export default function About() {
     }
   ];
 
-  const team = [
+  const teamLead = [
     {
       role: "BCBA",
-      bio:
-        "Behviour support program for children with autism and other developmental disabilities.",
+      bio: `Abiola Ahmed, the owner and team lead of B&S Consultants, is a Board-Certified Behavior Analyst (BCBA). She has been active in the field of ABA since 2014 and possesses over ten years of experience working with children aged between 2 and 12, living with autism and other developmental disabilities. 
+        Abiola holds a Bachelor of Science degree in Microbiology from Lagos State University and a Master of Arts from Ball State University, Indiana. Her extensive experience with autism is underscored by her personal involvement as an autism parent and her professional commitment to working with children diagnosed with autism for more than a decade. Abiola is particularly passionate about early intervention and the dissemination of ABA practices.`,
       img: "/staff-3.png"
     },
+  ];
+
+  const team = [
     {
       role: "Behavior Technician",
       bio: "Specializes in communication skills development for nonverbal children.",
@@ -40,7 +43,7 @@ export default function About() {
       bio: "Specializes in communication skills development for nonverbal children.",
       img: "/staff-1.png"
     }
-  ];
+  ]
 
   return (
     <main>
@@ -60,7 +63,6 @@ export default function About() {
             transition={{ delay: 0.2 }}
             className="text-xl max-w-3xl mx-auto leading-relaxed"
           >
-            {/* Mirror the homepage description */}
             Our team, led by a Board-Certified Behavior Analyst, helps children with autism develop essential life skills through <span className="font-semibold">play-based ABA therapy</span>, grounded in compassion and tailored to each child's unique needs.
           </motion.p>
         </div>
@@ -90,7 +92,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team Section - Expanded */}
+      {/* Team Lead */}
       <section className="py-20 bg-blue-50">
         <div className="container mx-auto px-4">
           <motion.div
@@ -100,15 +102,61 @@ export default function About() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Meet Our <span className="text-blue-600">Expert Team</span>
+              Meet Our <span className="text-blue-600"> Team Lead</span>
+            </h2>
+          </motion.div>
+
+          <div>
+            {teamLead.map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all"
+              >
+                <div className="w-40 h-40 rounded-full bg-gray-100 overflow-hidden mx-auto mb-6 border-4 border-blue-100">
+                  <Image
+                    src={member.img}
+                    width={160}
+                    height={160}
+                    className="w-full h-full object-cover"
+                    alt="Team Member Image"
+                  />
+                </div>
+                <div className="text-center">
+
+                  <p className="text-blue-600 mb-3 flex justify-center items-center gap-1 font-bold"> {member.role}
+                  </p>
+                  <p className="text-gray-600 ">{member.bio}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+
+      <section className="py-20 bg-blue-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our <span className="text-blue-600"> Team </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              {/* References "compassionate care" from homepage */}
+
               The passionate professionals behind our evidence-based, compassionate care.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {team.map((member, index) => (
               <motion.div
                 key={index}
@@ -129,10 +177,9 @@ export default function About() {
                 </div>
                 <div className="text-center">
 
-                  <p className="text-blue-600 mb-3 flex justify-center items-center gap-1">
-                    <FaStar className="text-yellow-400" /> {member.role}
+                  <p className="text-blue-600 mb-3 flex justify-center items-center gap-1 font-bold"> {member.role}
                   </p>
-                  <p className="text-gray-600">{member.bio}</p>
+                  <p className="text-gray-600 ">{member.bio}</p>
                 </div>
               </motion.div>
             ))}
@@ -140,7 +187,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* New CTA Section - Mirrors Homepage */}
+
+
       <section className="py-16 bg-blue-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div

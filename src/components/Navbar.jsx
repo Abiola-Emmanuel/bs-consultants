@@ -20,12 +20,15 @@ export default function Navbar() {
     <motion.nav className="sticky top-0 z-50 bg-white shadow-lg ">
       <div className="container mx-auto px-4  md:py-4">
         <div className="flex justify-between items-center">
-          {/* Logo/Brand */}
           <motion.div whileHover={{ scale: 1.05 }}>
             <Link href="/" className="text-xl md:text-2xl font-bold">
               {/* B & S Consultants | */}
               <div className="flex items-center ">
-                <img src="/logo4.svg" className="w-[85px]" alt="" /> <span>| B & S Consultants </span>
+                <img src="/logo4.svg" className="w-[85px]" alt="" />
+                <div className="border border-l-1 h-15 mr-4"></div>
+                <div className="flex flex-col">
+                  <span> B & S  </span> <span>Consultants</span>
+                </div>
               </div>
             </Link>
           </motion.div>

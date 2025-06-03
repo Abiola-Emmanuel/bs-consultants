@@ -41,18 +41,18 @@ export default function Services() {
         "Communication skills.",
         "Reducion of challenging behavior.",
       ],
-      homepageQuote: "Teaches essesntial skils for school independence"
+      homepageQuote: "Teaches essential skils for school independence"
     },
 
     {
       icon: <FaHome className="text-blue-600 text-4xl" />,
-      title: "In-Home ABA Therapy",
-      description: "Therapy delivered in your child's natural environment to promote skill generalization.",
+      title: "In-Home Behaviour Consultation",
+      description: "We offer consultation services at home, including in home assessments, behaviour management, parental coaching and intensive toilet training.",
       highlights: [
         "Family-centered approach.",
-        "Real-life skill practice.",
-        "Behavior management at home.",
-        "Parent coaching included."
+        "Practical application of real-life skills.",
+        "Behavior management within the home environment.",
+        "Generalization of acquired skills"
       ]
     }
   ];

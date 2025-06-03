@@ -75,9 +75,9 @@ const page = () => {
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Positively Impacting Lives Of Children</h1>
+          <h1 className="text-3xl md:text-6xl font-bold mb-4">Positively Impacting Lives Of Children Living With Autism And Other Developmental Disabilities</h1>
 
-          <p className="text-lg md:text-xl text-gray-800 dark:text-gray-300 max-w-2xl mx-auto">Evidence based intervention</p>
+          <p className="text-lg md:text-xl text-gray-900 max-w-2xl mx-auto">Evidence based intervention</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">
