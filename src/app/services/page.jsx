@@ -35,7 +35,7 @@ export default function Services() {
       description: "We prepare children for academic success by teaching classroom routines, foundational skills, and independence. This program aims to provide comprehensive support to children, ensuring they are well equipped to handle the challenges and expectations of school.",
       highlights: [
         "Pre academic skills.",
-        "Adaptive skills training - folowing routines, self care and organization.",
+        "Adaptive skills training - following routines, self care and organization.",
         "Transition support- moving from therapy to school.",
         "Self-care skill development.",
         "Communication skills.",
