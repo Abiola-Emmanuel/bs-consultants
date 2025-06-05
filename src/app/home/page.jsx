@@ -43,7 +43,7 @@ export default function Hero() {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="text-3xl md:tex-6xl font-bold text-gray-900 mb-6 line-he"
             >
-              Applied Behaviour Analysis Therapy for children living With Autism And Other Developmental Disablities.
+              Applied Behaviour Analysis Therapy for children living With Autism And Other Developmental Disabilities.
             </motion.h1>
 
             {/* Subheading */}
