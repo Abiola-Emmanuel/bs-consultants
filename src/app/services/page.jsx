@@ -39,9 +39,9 @@ export default function Services() {
         "Transition support- moving from therapy to school.",
         "Self-care skill development.",
         "Communication skills.",
-        "Reducion of challenging behavior.",
+        "Reduction of challenging behavior.",
       ],
-      homepageQuote: "Teaches essential skils for school independence"
+      homepageQuote: "Teaches essential skills for school independence"
     },
 
     {
