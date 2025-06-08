@@ -26,8 +26,8 @@ export default function About() {
   const teamLead = [
     {
       role: "Abiola Ahmed, M.A., BCBA",
-      bio: `Abiola Ahmed, the owner and team lead of B&S Consultants, is a Board-Certified Behavior Analyst (BCBA). She has been active in the field of ABA since 2014 and possesses over ten years of experience working with children aged between 2 and 12, living with autism and other developmental disabilities. 
-        Abiola holds a Bachelor of Science degree in Microbiology from Lagos State University and a Master of Arts from Ball State University, Indiana USA. Her extensive experience with autism is emphasized by her personal involvement as an autism parent and her professional commitment to working with children diagnosed with autism for more than a decade. Abiola is very passionate about early intervention and the dissemination of ABA practices.`,
+      bio: `Abiola Ahmed, the owner and team lead of B&S Consultants, is a Board-Certified Behavior Analyst (BCBA). She has been active in the field of ABA since 2014 and possesses over ten years of experience working with children aged between 2 and 12, living with autism and other developmental disabilities.
+        Abiola holds a Bachelor of Science degree in Microbiology from Lagos State University and a Master of Arts from Ball State University, Indiana, USA. Her extensive experience with autism is emphasized by her personal involvement as an autism parent and her professional commitment to working with children diagnosed with autism for more than a decade. Abiola is very passionate about early intervention and the dissemination of ABA practices.`,
       img: "/staff-3.png"
     },
   ];
